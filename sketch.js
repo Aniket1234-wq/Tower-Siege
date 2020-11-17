@@ -3,6 +3,8 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
+
+
 var engine,world;
 
 function setup() {
@@ -71,66 +73,70 @@ function setup() {
 }
 
 function draw() {
-  background("red");
+  background(247, 223, 178);
   Engine.update(engine);  
 
-  debug:true;
-
-  box1.display();
-  box2.display();
-  box3.display();
-  box4.display();
-  box5.display();
-  box6.display();
-
-  box7.display();
-  box8.display();
-  box9.display();
-  box10.display();
-  box11.display();
-
-  box12.display();
-  box13.display();
-  box14.display();
-  box15.display();
-
-  box16.display();
-  box17.display();
-  box18.display();
-
-  box19.display();
-  box20.display();
-
-  box21.display();
+ 
   
-  box22.display();
-  box23.display();
-  box24.display();
-  box25.display();
-  box26.display();
-  box27.display();
+   
 
-  box28.display();
-  box29.display();
-  box30.display();
-  box31.display();
-  box32.display();
+    box1.display();
+    box2.display();
+    box3.display();
+    box4.display();
+    box5.display();
+    box6.display();
 
-  box33.display();
-  box34.display();
-  box35.display();
-  box36.display();
+    box7.display();
+    box8.display();
+    box9.display();
+    box10.display();
+    box11.display();
 
-  box37.display();
-  box38.display();
-  box39.display();
+    box12.display();
+    box13.display();
+    box14.display();
+    box15.display();
 
-  ball.display();
-  spring.display();
-  ground.display();
-  groundHovering.display();
+    box16.display();
+    box17.display();
+    box18.display();
+
+    box19.display();
+    box20.display();
+
+    box21.display();
   
-} 
+    box22.display();
+    box23.display();
+    box24.display();
+    box25.display();
+    box26.display();
+    box27.display();
+
+    box28.display();
+    box29.display();
+    box30.display();
+    box31.display();
+    box32.display();
+
+    box33.display();
+    box34.display();
+    box35.display();
+    box36.display();
+
+    box37.display();
+    box38.display();
+    box39.display();
+
+    ball.display();
+    spring.display();
+    ground.display();
+    groundHovering.display();
+
+  }
+
+  
 
 function mouseDragged(){
   Matter.Body.setPosition(ball.body,{x:mouseX,y:mouseY});
@@ -138,4 +144,12 @@ function mouseDragged(){
 
 function mouseReleased(){
   spring.release();
+}
+
+function keyPressed(){
+  if(keyCode === 32){
+    spring.attach(ball.body);
+  }
+
+ 
 }
